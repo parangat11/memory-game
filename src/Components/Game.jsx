@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Profile from "./Profile.jsx";
 import "../styles/game.css";
 
-const total = 6;
+const total = 12;
 
 function selectBosses(result) {
     const indeces = new Set();
@@ -37,8 +37,6 @@ function generateSequence() {
     }
     return arr;
 }
-
-
 
 export default function Game({ result }){
     const [bosses, setBosses] = useState(selectBosses(result));
