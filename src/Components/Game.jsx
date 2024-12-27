@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Profile from "./Profile.jsx";
 import "../styles/game.css";
 
-const total = 12;
+const total = 6;
 
 function selectBosses(result) {
     const indeces = new Set();
@@ -81,6 +81,11 @@ export default function Game({ result }){
     useEffect(() => {
         if(maxScore < score) {
             setMaxScore(score);
+        }
+        if(score === total) {
+            alert("You Won!");
+            setScore(0);
+            setBosses(selectBosses(result));
         }
     }, [score, maxScore])
     useEffect(() => {
