@@ -1,0 +1,25 @@
+.card {
+    height: 400px;
+    width: 500px;
+    border: 2px solid black;
+    display: grid;
+    padding: 10px;
+}
+
+.image-container {
+    max-width: 500px;
+    height: 300px;
+    align-self: center;
+    justify-self: center;
+}
+
+img {
+    height: 300px;
+    width: 100%;
+}
+
+.details {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 20px;
+}
