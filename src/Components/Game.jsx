@@ -64,7 +64,7 @@ export default function Game({ result }){
                 newBosses.push(currBoss);
             }
             if(gameOver) {
-                for(let i = 0; i < newBosses.size; i++) {
+                for(let i = 0; i < newBosses.length; i++) {
                     newBosses[i] = {...newBosses[i], selected: false};
                 }
             }
@@ -78,7 +78,6 @@ export default function Game({ result }){
             return newBosses;
         })
     }
-    console.log(score);
     useEffect(() => {
         if(maxScore < score) {
             setMaxScore(score);
@@ -92,7 +91,19 @@ export default function Game({ result }){
     }, [bosses, result]);
     return (
         <>
-            <div className="header">I shall remember thee...</div>
+            <div className="header">
+                <div className="title">
+                    I shall remember thee...
+                </div>
+                <div className="scores">
+                    <div className="curr-score">
+                        Score: {score}
+                    </div>
+                    <div className="max-score">
+                        Max Score: {maxScore}
+                    </div>
+                </div>
+            </div>
             <div className="game-board">
                 <div className="card-container">
                     {sequence.map(index => {

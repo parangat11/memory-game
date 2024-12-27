@@ -15,7 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-div#root, html, body, :root {
+div#root, html, body, :root, * {
   max-width: unset;
   margin: 0;
   padding: 0;
